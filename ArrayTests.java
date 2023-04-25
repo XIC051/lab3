@@ -1,4 +1,7 @@
 import static org.junit.Assert.*;
+
+import java.beans.Transient;
+
 import org.junit.*;
 
 public class ArrayTests {
@@ -27,5 +30,11 @@ public class ArrayTests {
   public void test2() {
     int[] input1 = {1, 2};
     assertArrayEquals(new int[]{2, 1}, ArrayExamples.reversed(input1));
+  }
+
+  @Test
+  public void test3() { //average without lowest
+    double[] input1 = {1.0, 1.0, 1.0, 1.0};
+    assertEquals(1/3, ArrayExamples.averageWithoutLowest(input1), 0.1);
   }
 }
